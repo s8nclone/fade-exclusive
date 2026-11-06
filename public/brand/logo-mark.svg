@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 280" fill="currentColor" role="img" aria-label="Fadé Exclusive Monogram">
+  <!-- Left F Stem + Top-left horizontal bar + Middle-left horizontal bar -->
+  <path d="M 30 56 H 90 V 84 H 60 V 148 H 112 V 176 H 60 V 260 H 30 Z" />
+  <!-- Top middle bar + Acute Accent (É) -->
+  <path d="M 102 56 H 146 L 178 24 H 214 L 154 84 H 102 Z" />
+  <!-- Right mirrored E Stem + Top-right corner + Middle-right bar + Bottom bar -->
+  <path d="M 192 56 H 210 V 260 H 72 V 232 H 180 V 176 H 128 V 148 H 180 V 84 H 170 Z" />
+</svg>

@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+  /* TODO(owner): Brand tokens configured from Fadé Exclusives 2026 Portfolio */
+  --background: #f4f1ea;
+  --foreground: #161412;
+  --surface: #eae4d8;
+  --surface-elevated: #faf8f4;
+  --obsidian: #161412;
+  --obsidian-foreground: #f4f1ea;
+  --primary: #161412;
+  --primary-foreground: #f4f1ea;
+  --accent: #9e7344;
+  --accent-foreground: #faf8f4;
+  --muted: #e3ddd0;
+  --muted-foreground: #5e564e;
+  --border: #d6cfc1;
+  --input: #d6cfc1;
+  --ring: #9e7344;
+  --destructive: #9e2a2b;
+  --destructive-foreground: #faf8f4;
+  --success: #2a5c43;
+  --success-foreground: #faf8f4;
+  --warning: #a66e28;
+  --warning-foreground: #faf8f4;
+
+  /* Dynamic Banner Defaults (overridden via inline CSS variables) */
+  --banner-bg: #161412;
+  --banner-fg: #f4f1ea;
+  --banner-btn-bg: #9e7344;
+  --banner-btn-fg: #faf8f4;
+
+  --radius-sm: 0px;
+  --radius-md: 2px;
+  --radius-lg: 4px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-obsidian: var(--obsidian);
+  --color-obsidian-foreground: var(--obsidian-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --font-serif: var(--font-cormorant), Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  background-color: var(--background);
+  color: var(--foreground);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom luxury scrollbars */
+.scrollbar-luxury {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+.scrollbar-luxury::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.scrollbar-luxury::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-luxury::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 2px;
+}
+.scrollbar-luxury::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent);
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  quality-and-test:
+    runs-on: ubuntu-latest
+    env:
+      ADMIN_PATH_SLUG: "fade-atelier-ops-9x7k"
+      BETTER_AUTH_SECRET: "ci-test-secret-minimum-32-characters-long-12345"
+      BETTER_AUTH_URL: "http://localhost:3000"
+      NEXT_PUBLIC_SITE_URL: "http://localhost:3000"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 12.14.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+
+      - name: Install dependencies (frozen lockfile)
+        run: pnpm install --frozen-lockfile
+
+      - name: Check for gradients & run ESLint
+        run: pnpm lint
+
+      - name: TypeScript typecheck
+        run: pnpm typecheck
+
+      - name: Run unit & integration tests
+        run: pnpm test
+
+      - name: Build production bundle
+        run: pnpm build

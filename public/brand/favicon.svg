@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" role="img" aria-label="Fadé Exclusive Favicon">
+  <rect width="280" height="280" fill="#F4F1EA" />
+  <rect x="8" y="8" width="264" height="264" fill="none" stroke="#9E7344" stroke-width="4" />
+  <g transform="translate(20, 0)" fill="#161412">
+    <path d="M 30 56 H 90 V 84 H 60 V 148 H 112 V 176 H 60 V 260 H 30 Z" />
+    <path d="M 102 56 H 146 L 178 24 H 214 L 154 84 H 102 Z" />
+    <path d="M 192 56 H 210 V 260 H 72 V 232 H 180 V 176 H 128 V 148 H 180 V 84 H 170 Z" />
+  </g>
+</svg>
